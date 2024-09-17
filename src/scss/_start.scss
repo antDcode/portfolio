@@ -1,0 +1,95 @@
+@import "variables";
+@import "base";
+
+#start {
+  position: relative;
+  min-height: 85dvh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    @include isDesktop {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  h1 {
+    position: relative;
+    font-size: $h2;
+    font-weight: 900;
+    margin-bottom: 5.25rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+
+    @include isDesktop {
+      line-height: 1.11;
+      font-size: 5.5rem;
+      max-width: 90rem;
+    }
+
+    & > span {
+      display: block;
+      font-size: $h1;
+      white-space: nowrap;
+      color: $brand-color-2;
+    }
+  }
+  .list{
+    display: flex;
+    gap: 4rem;
+    li:not(.arrow){
+      border: 1px solid $text-color;
+      padding: 2rem;
+      img{
+        width: 4rem;
+        margin-bottom: 1rem;
+      }
+      font-size: $h4;
+    }
+    .arrow{
+      display: flex;
+      align-items: center;
+      img{
+        width: 4rem;
+        margin-left: 2rem;
+      }
+    }
+    @include isMobile{
+      gap: 4rem;
+      flex-wrap: wrap;
+      li{
+        padding-right: 3rem;
+      }
+      .arrow{
+        img{
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

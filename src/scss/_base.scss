@@ -1,0 +1,131 @@
+@import "variables";
+
+@mixin isMobile {
+  @media (max-width: $width-mob) {
+    @content;
+  }
+}
+
+@mixin isDesktop {
+  @media (min-width: $width-mob) {
+    @content;
+  }
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+%mc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%pos-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+%pos-fix-full{
+  @extend %pos-fix;
+  height: 100%;
+}
+%pos-full {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-bt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@keyframes moveUp {
+  0% {
+    background-position: -10% 0;
+  }
+  100% {
+    background-position: -10% 90px;
+  }
+}
+
+@keyframes anim-btn {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes contactZoom {
+  0% {
+    color: $text-color-dark;
+  }
+  70% {
+    color: $text-color-dark;
+  }
+  71% {
+    color: $brand-color;
+  }
+  100% {
+    color: $brand-color;
+  }
+}
+
+@keyframes mouseRun {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(245deg);
+  }
+  20% {
+    transform: translate(-0.25rem, 0.5rem) rotate(245deg);
+  }
+  30% {
+    transform: translate(-0.5rem, 1rem) rotate(245deg);
+  }
+  40% {
+    transform: translate(-1.1rem, 1.25rem) rotate(245deg);
+  }
+  50% {
+    transform: translate(-2rem, 1.5rem) rotate(245deg);
+  }
+  60% {
+    transform: translate(-3rem, 1.3rem) rotate(245deg);
+  }
+  70% {
+    transform: translate(-4rem, 1.1rem) rotate(245deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-5rem, 0rem) rotate(245deg);
+  }
+  81% {
+    opacity: 0;
+    transform: translate(-5rem, 0rem) rotate(245deg);
+  }
+  100% {
+    transform: translate(-5rem, 0rem) rotate(245deg);
+  }
+}
+
+
+@include isMobile {
+  .only-desktop {
+    display: none;
+  }
+}
+
+@include isDesktop {
+  .only-mobile {
+    display: none;
+  }
+}
+

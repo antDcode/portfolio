@@ -1,0 +1,55 @@
+@import "variables";
+@import "base";
+
+#can-i-teach {
+  .list-icon {
+    @include isDesktop {
+      gap: 3rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      li {
+        border: .1rem solid rgba(0, 0, 0, .1);
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 40%;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:nth-child(even) {
+          transform: translateY(30%);
+          background: $bg-color-dark;
+          color: $text-color-dark;
+        }
+
+        &:nth-child(odd) {
+          transform: translateY(-30%);
+        }
+
+        &:not(:last-child):not(:nth-last-child(2))::before {
+          content: "|";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          color: $text-color;
+          transform: translateY(100%);
+        }
+
+        h3 {
+          text-align: center;
+        }
+
+        .icon {
+          margin-right: 0.5rem;
+
+          img {
+            width: 6rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "base";
+
+#will-get {
+  .block-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    li{
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    @include isDesktop{
+      flex-wrap: wrap;
+      gap: 5rem;
+
+      li{
+        width: 30%;
+        img{
+          max-width: 5rem;
+          margin-right: 2rem;
+        }
+
+      }
+    }
+    @include isMobile{
+      flex-direction: column;
+      li{
+        width: 100%;
+        img{
+          max-width: 3rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

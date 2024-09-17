@@ -1,0 +1,28 @@
+@import "base";
+
+#show-technologies {
+  @include isMobile {
+    .block-list {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5rem;
+      gap: 3rem;
+    }
+  }
+  @include isDesktop {
+    .block-list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.tech-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+
+

@@ -1,0 +1,39 @@
+@import "base";
+@import "default";
+@import "swiper";
+@import "start";
+@import "carousel";
+@import "decoration";
+
+@import "all";
+@import "buttons";
+
+@import "header";
+@import "about";
+@import "steps";
+//@import "can-i-teach";
+@import "tech";
+@import "will-get";
+@import "why-me";
+@import "about-mentor";
+@import "price";
+@import "faq";
+
+
+#for-whom, #why-me {
+  z-index: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#contacts {
+  min-height: auto;
+}
+
+.footer {
+  border-top: .1rem solid #2221;
+}
+

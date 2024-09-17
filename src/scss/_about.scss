@@ -1,0 +1,147 @@
+@import "base";
+
+#about {
+  min-height: auto;
+  .container {
+    gap: 3rem;
+    @include isDesktop{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .text{
+    h2{
+      text-align: left;
+      color: $text-color;
+      font-weight: 500;
+      font-size: $h2;
+      margin: 0 0 4rem 0;
+      span{
+        display: block;
+        color: $brand-color;
+      }
+    }
+    .list{
+      display: flex;
+      gap: 4rem;
+      margin-left: 4rem;
+      li{
+        display: flex;
+        border: 1px solid $text-color;
+        padding: 2rem;
+        img{
+          width: 4rem;
+          margin-right: 2rem;
+        }
+        font-size: $h4;
+      }
+      @include isMobile{
+        margin-left: 0;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.counters {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  @include isDesktop{
+    margin-left: auto;
+    gap: 7rem;
+  }
+
+  .counter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    .number {
+      margin: 0;
+      font-size: 5rem;
+      font-weight: 600;
+
+      text-align: right;
+      counter-set: num var(--num);
+      transition: --num 3s ;
+      &::after {
+        content: "+";
+      }
+
+      &::before {
+        content: counter(num);
+      }
+    }
+
+    .label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $text-color;
+      font-size: 2rem;
+      text-transform: uppercase;
+      line-height: 1.2;
+      font-weight: 600;
+      margin: 0 0 0 2rem;
+      @include isMobile{
+        font-size: 1.6rem;
+        margin: 0 0 0 1.5rem;
+      }
+    }
+    @include isMobile{
+      margin-top: 3.5rem;
+      .number{
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  &.active{
+    .experience .number{
+      --num: 12;
+      min-width:5rem;
+      @include isDesktop{
+        min-width:10rem;
+      }
+    }
+    .students .number{
+      --num: 100;
+      min-width:8rem;
+      @include isDesktop{
+        min-width:12.5rem;
+      }
+    }
+  }
+
+}
+
+
+.sq{
+  display: flex;
+  gap: 5rem;
+  margin: 15rem 0;
+  overflow: hidden;
+  list-style: none;
+  position: sticky;
+  top:50%;
+  left:0;
+  translate: 0 -50%;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+  }
+  li{
+    width: 50rem;
+    position: relative;
+    height:50rem;
+    padding: 3rem;
+    border: .2rem solid #eee;
+    flex: 0 0 auto;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: flex-end;
+
+  }
+}

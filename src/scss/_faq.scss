@@ -1,0 +1,51 @@
+@import "variables";
+@import "base";
+
+#faq {
+  .faq-list {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  details {
+    position: relative;
+    border: .1rem solid #5d606a;
+    border-radius: 2rem;
+    background: #343845;
+
+
+    summary {
+      font-weight: 500;
+      list-style: none;
+      padding: 1.2rem 4rem 1.2rem 1.2rem;
+
+    }
+
+    &::after {
+      content: '+';
+      line-height: 5rem;
+      position: absolute;
+      pointer-events: none;
+      right: 2rem;
+      top: 0;
+      font-size: $font-xxl
+    }
+
+    &[open]::after {
+      content: '–';
+
+    }
+    cursor: pointer;
+
+    p {
+      font-size: 90%;
+      margin-top: .5rem;
+      padding: .4rem 4rem 1.2rem 1.2rem;
+    }
+  }
+  .btn{
+    margin: 5rem auto 0;
+    display: block;
+  }
+}

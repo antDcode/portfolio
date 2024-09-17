@@ -1,0 +1,48 @@
+svg icons here
+https://iconscout.com/icon-pack/business-and-data-management-4
+
+https://iconscout.com/free-icon-pack/research-and-development-8
+
+frameworks and libs icons
+https://iconscout.com/free-icon-pack/programming-relate
+
+https://iconscout.com/icon-pack/logo-freebies
+
+https://iconscout.com/icon-pack/programming-96
+
+https://iconscout.com/icons/brand-logo-programming
+
+gallery
+https://codepen.io/noirsociety/details/ZEwLGXB
+
+video sources
+https://www.pexels.com/video/a-person-holding-a-white-board-6913271/
+https://www.pexels.com/video/programmers-working-and-sharing-ideas-4974769/
+
+illustrations
+https://undraw.co/search for search "programming"
+
+
+
+
+bg
+https://optim.tildacdn.com/tild6639-3963-4834-b533-363136626563/-/format/webp/blending_1574090601_.png
+
+курсы
+https://www.behance.net/gallery/175776925/Ascon-Systems?tracking_source=search_projects&l=36
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	let Tawk_API = Tawk_API || {},
+	  Tawk_LoadStart = new Date();
+	(function () {
+		const s1 = document.createElement('script'), s0 = document.getElementsByTagName('script')[0]
+		s1.async = true
+		s1.src = 'https://embed.tawk.to/66bb70f7146b7af4a439e069/1i5632ht0'
+		s1.charset = 'UTF-8'
+		s1.setAttribute('crossorigin', '*')
+		s0.parentNode.insertBefore(s1, s0)
+	})()
+</script>

@@ -1,0 +1,177 @@
+@import "variables";
+@import "base";
+
+#about-mentors {
+  position: relative;
+
+  h3 {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+      margin-left: 1.5rem;
+    }
+  }
+
+  //video {
+  //  top: 0;
+  //  position: absolute;
+  //  height: 100%;
+  //  width: 100%;
+  //  object-fit: cover;
+  //  z-index: 0;
+  //  filter: brightness(.7) blur(1px);
+  //}
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-main {
+    display: flex;
+    position: relative;
+    @include isMobile {
+      flex-direction: column;
+      .about-mentor{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-areas: "logo h3" "logo contacts";
+        .about-logo{
+          grid-area: logo;
+          img{
+            margin: 1rem 0 0 0;
+            max-width: 15rem;
+          }
+        }
+        >h3{
+          grid-area: h3;
+        }
+        .about-contacts{
+          grid-area: contacts;
+        }
+      }
+    }
+
+
+  }
+
+  .about-logo {
+    img {
+      width: 75%;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+  .about-text {
+    z-index: 5 !important;
+    position: relative;
+    p {
+      color: #fff;
+      transition: .5s all;
+
+      & + p {
+        margin-top: 1.5rem;
+      }
+    }
+    .about-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #1C202E);
+    }
+    .about-text-box{
+      position: relative;
+      max-height: 21rem;
+      overflow: hidden;
+      &.active{
+        max-height: max-content;
+        overflow: auto;
+        .about-overlay{
+          display: none;
+        }
+      }
+    }
+    button{
+      margin-top: 2rem;
+    }
+    @include isMobile{
+      margin-top: 5rem;
+    }
+  }
+
+
+  @include isDesktop {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 13.4rem;
+    }
+    .title {
+      width: 100%;
+      order: 0;
+    }
+    .about-text {
+      border-left: .1rem solid #71778d;
+      max-width: 70rem;
+      order: 2;
+      padding: 2rem 0 1rem 3rem;
+    }
+    .about-main {
+      margin: 2rem auto 0;
+      order: 1;
+
+      .about-mentor {
+        order: 1;
+        margin-left: 2rem;
+      }
+
+      .about-logo {
+        order: 0;
+      }
+    }
+  }
+
+
+  .about-contacts {
+    position: relative;
+    margin-top: 1.5rem;
+    li {
+      display: flex;
+      transition: 0.2s all;
+      &:not(:first-child){
+        margin-top: 1rem;
+      }
+
+      img {
+        transition: 0.2s all;
+        max-width: 3rem;
+        margin-right: 1rem;
+      }
+      &:hover{
+        color: $brand-color;
+        img{
+          transform: translateX(-0.5rem);
+        }
+      }
+      &:last-child {
+        animation: 5s linear contactZoom infinite;
+      }
+    }
+
+    &::after {
+      opacity: 0.7;
+      content: "➤";
+      position: absolute;
+      left: 20rem;
+      bottom: 0;
+      transform: rotate(245deg);
+      animation: 5s linear mouseRun infinite;
+    }
+  }
+}
